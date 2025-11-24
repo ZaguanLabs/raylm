@@ -4,9 +4,9 @@ RayLM is a Python script that leverages Large Language Models (LLMs) to automati
 
 ## Demo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/VOHAR-zaido?si=kTJyE2cwTZ1J_DAe" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![Watch the demo](https://img.youtube.com/vi/VOHAR-zaido/0.jpg)](https://youtu.be/VOHAR-zaido)
 
-**Watch the demo:** An exploration of AI-powered video generation using POV-Ray and LLMs. While POV-Ray has its limits, it offers a unique approach to creating 3D animated content through text prompts.
+*Click to watch:* An exploration of AI-powered video generation using POV-Ray and LLMs. While POV-Ray has its limits, it offers a unique approach to creating 3D animated content through text prompts.
 
 ## How It Works
 
