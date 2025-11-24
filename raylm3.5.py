@@ -429,7 +429,7 @@ class RayLM:
                 relevant.append(line)
         return "\n".join(relevant) if relevant else "\n".join(lines[-20:])
 
-    def run(self, full_prompt: str, animate: bool, duration: float, dry_run: bool, render_file: str):
+    def run(self, full_prompt: str, animate: bool, duration: float, no_render: bool, render_file: str):
         if not self.renderer.check_installed():
             print("ERROR: 'povray' not found.")
             return
@@ -477,8 +477,8 @@ class RayLM:
             saved_path = self._save_history_file(current_code)
             print(f"\n💾 Saved to History: {saved_path}")
 
-            if dry_run:
-                print("\n✨ Dry Run Complete. Exiting.")
+            if no_render:
+                print("\n✨ Code Generation Complete. Exiting.")
                 return
 
             # Prepare for rendering loop
@@ -549,7 +549,7 @@ def main():
     parser.add_argument("prompt", nargs="?", help="Scene description")
     parser.add_argument("--file", "-f", help="Load prompt from file")
 
-    parser.add_argument("--dry-run", action="store_true", help="Generate and save only (no render)")
+    parser.add_argument("--no-render", action="store_true", help="Generate and save only (no render)")
     parser.add_argument("--render", help="Render an existing .pov file (skips AI)")
 
     parser.add_argument("--animate", action="store_true", help="Animation mode")
@@ -606,7 +606,7 @@ def main():
 
     app = RayLM(config)
     try:
-        app.run(final_prompt, args.animate, args.duration, args.dry_run, args.render)
+        app.run(final_prompt, args.animate, args.duration, args.no_render, args.render)
     except KeyboardInterrupt:
         print("\nAborted.")
     except Exception as e:

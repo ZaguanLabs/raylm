@@ -93,7 +93,7 @@ python raylm3.5.py [PROMPT] [options]
 - `PROMPT`: Scene description (positional argument, optional if using `--file` or `--render`)
 - `-h, --help`: Show help message and exit
 - `-f FILE, --file FILE`: Load prompt from a text file
-- `--dry-run`: Generate and save POV-Ray code only (no rendering)
+- `--no-render`: Generate and save POV-Ray code only (no rendering)
 - `--render FILE`: Render an existing .pov file (skips AI generation)
 
 ### Animation Options
@@ -128,7 +128,7 @@ python raylm3.5.py --file my_scene_prompt.txt
 ### 3. Generate Code Only (No Rendering)
 Create POV-Ray code without rendering it:
 ```bash
-python raylm3.5.py "A spaceship landing on Mars" --dry-run
+python raylm3.5.py "A spaceship landing on Mars" --no-render
 ```
 
 ### 4. Render Existing POV-Ray File
