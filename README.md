@@ -188,20 +188,6 @@ Default models:
 - **Generator**: `zaguanai/gemini-3-pro-preview`
 - **Verifier**: `zaguanai/claude-sonnet-4.5-latest`
 
-### POV-Ray Requirement
-POV-Ray is a mandatory requirement for rendering. The script calls the `povray` command to render generated scenes. Without POV-Ray properly installed and accessible in your system PATH, the script will fail during the rendering phase.
-
-### FFmpeg Requirement
-FFmpeg is required only for animation mode (`--animate`). If you're only generating static images, FFmpeg is not necessary.
-
-## Example Output
-
-RayLM can generate scenes ranging from simple geometric arrangements to complex architectural visualizations, fantasy landscapes, and abstract art - all automatically created by the AI and rendered into video format.
-
-## How It Differs From Standard LLM Usage
-
-Rather than just describing scenes in text, RayLM actually produces executable POV-Ray code that can be directly rendered into photorealistic videos. This bridges the gap between creative AI and practical 3D rendering.
-
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
